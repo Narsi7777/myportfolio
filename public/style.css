@@ -1,0 +1,11 @@
+
+.navbar {
+    background-color: #2d3748; 
+    padding: 1rem; 
+    color: white; 
+    position: fixed;
+    width: 100%; 
+    z-index: 10; 
+    top: 0; 
+  }
+  

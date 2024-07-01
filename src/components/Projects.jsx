@@ -1,18 +1,18 @@
 
 import React from "react";
-import vpn from '../assets/vpn.png'
-import copeople from '../assets/copeople.png'
 import Footer from './Footer'
-
-const ProjectCard = ({ image, title, description, git, technologies }) => {
+import landing from "../assets/landingPage.png"
+import weather from "../assets/weather.png"
+import simon from "../assets/simon.png"
+import stopwatch from "../assets/stopwatch.png"
+import ticimage from "../assets/tic.png"
+const ProjectCard = ({ image, title, description, git, technologies,website }) => {
     return (
         <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            {title=='Snap Shot' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={vpn} alt="" />
-            </a>}
-            {title=='Co People' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={copeople} alt="" />
-            </a>}
+           
+                <img className="w-full rounded-t-lg h-auto object-cover " src={image} alt="" />
+           
+          
             <div className="p-4 sm:p-6">
                 <a href="#">
                     <h5 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-pink-500">{title}</h5>
@@ -30,7 +30,10 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
                         </p>
                     ))}
                 </div>
-                <a href={git} className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300">GitHub</a>
+                <a href={git} className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300" >Git Repo</a>
+                {website!==null&&
+                    <a href={website} className="text-green-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300">Website</a>
+                }
             </div>
         </div>
     );
@@ -48,6 +51,7 @@ const Projects = () => {
                         description={item.description}
                         links={item.links}
                         git={item.git}
+                        website={item.website}
                         technologies={item.technologies}
                     />
                 ))}
@@ -60,19 +64,55 @@ const Projects = () => {
 
 export const project = [
     {
-        title:'Co People',
-        description:'Co People is a dynamic web application I crafted using React, Node JS and React. This project is a modern and engaging social platform that allows users to connect, share content and interact seamlessly.',
-        image: {vpn},
-        git:'https://github.com/nithingooud/CoPeople',
-        technologies:['MongoDb' ,'ReactJS' , 'NodeJS']
+        title: "Weather Application",
+        description: "Developed a React-based weather application using OpenWeather and LocationIQ APIs to display current weather conditions and search for city-specific weather data. Implemented dynamic UI updates and navigation with React Router.",
+        image: weather,
+        git: "https://github.com/Narsi7777/weatherapp",
+        website: "https://narsi7777.github.io/weatherapp/",
+        technologies: ["ReactJS", "OpenWeather API", "LocationIQ API", "React Router"]
     },
     {
-        title:'Snap Shot',
-        description:'SnapShot is a stunning portfolio that I exclusively designed using React JS and tailwind CSS.This Project serves as a representation of a photographer’s work, highlighting their portfolio and services.',
-        image: {copeople},
-        git:"https://github.com/nithingooud/vpn_studios",
-        technologies:[ 'React JS', 'tailwind CSS']
+        title: "Responsive BMW Landing Page",
+        description: "Designed and developed a responsive BMW landing page using ReactJS, JavaScript, and CSS, showcasing sleek design and interactive elements for an engaging user experience.",
+        image: landing,
+        git: "https://github.com/Narsi7777/BmwResponsiveLandingPage",
+        website: "https://narsi7777.github.io/BmwResponsiveLandingPage/",
+        technologies: ["HTML", "ReactJS", "CSS"]
+    },
+    {
+        title: "Simon Game",
+        description: "Created a memory-based game using HTML, CSS, and JavaScript, where users replicate random sequences of lights and sounds.",
+        image: simon,
+        git: "https://github.com/Narsi7777/SIMON-GAME",
+        website: "https://narsi7777.github.io/SIMON-GAME/",
+        technologies: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        title: "Stopwatch",
+        description: "Built a digital stopwatch using HTML, CSS, and JavaScript, allowing users to start, stop, and reset time tracking.",
+        image: stopwatch,
+        git: "https://github.com/Narsi7777/stopWatch",
+        website: "https://narsi7777.github.io/stopWatch/",
+        technologies: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        title: "Tic-Tac-Toe Game",
+        description: "Implemented a classic Tic-Tac-Toe game with a simple UI and logic for two players using JavaScript and HTML/CSS.You can also play with AI opponent",
+        image: ticimage,
+        git: "https://github.com/Narsi7777/TicTocToe2",
+        website: "https://narsi7777.github.io/TicTocToe2/",
+        technologies: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        title: "Keeper App",
+        description: "Designed a note-taking app similar to Google Keep, using React for creating, deleting, and managing notes.",
+        image: "path_to_keeper_app_image",
+        git: "https://github.com/Narsi7777/Narsi-sKeeperApp3",
+        website: null,
+        technologies: ["ReactJS", "CSS"]
     }
 ]
 
+
 export default Projects
+

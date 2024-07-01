@@ -32,13 +32,20 @@ const About = () => {
       <div className='flex flex-col justify-around'>
         <div className='sm:px-16 px-2'>
           <h2 className='text-4xl sm:text-5xl font-extrabold mt-2'>Introduction</h2>
-          <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>👨‍💻 Hi, I'm Manda Nithin, a 2023 graduate🎓 with a passion for crafting robust backend systems and captivating mobile applications.As a seasoned <a className='text-green-300 hover:text-green-500 duration-300' href='https://www.linkedin.com/in/nithin-manda-728019214/' target='_blank'>Software developer</a> I specialize in both MEAN and MERN stacks🚀. 
+          {/* <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>👨‍💻 Hi, I'm Manda Nithin, a 2023 graduate🎓 with a passion for crafting robust backend systems and captivating mobile applications.As a seasoned <a className='text-green-300 hover:text-green-500 duration-300' href='https://www.linkedin.com/in/nithin-manda-728019214/' target='_blank'>Software developer</a> I specialize in both MEAN and MERN stacks🚀. 
           <br/>
           ✍️ Beyond coding, I love sharing my insights and experiences through engaging blogs on <a className=' text-purple-300 hover:text-purple-400 duration-300' href="https://medium.com/@goudnithin77" target='_blank'>Medium</a>, where I delve into the intricacies of software development and technology trends.
           On a different note, I'm also into photography📸. It's not just a hobby; I see it as a way to capture moments🌟📷, tell stories.</p>
 
+ */}
+
+
+        <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>👨‍💻 Hi, I'm NarasimhaRao Pasumarthi, an aspiring
+           <a className='text-green-300 hover:text-green-500 duration-300'  target='_blank'>  Software developer  </a> 
+           with a strong foundation in data structures and algorithms. Proficient in Java, Python, C++, and C.<br/> I have recently completed a <a className=' text-purple-300 hover:text-purple-400 duration-300' href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-3a10d56a-4de0-4d8e-8d03-e48a7f57fc74.pdf" target='_blank'>Full Stack Development</a>, course on Udemy, gaining expertise in ReactJS, JavaScript, and responsive design. Eager to leverage my skills in a dynamic and collaborative environment to contribute to innovative web development projects.</p>
+        
           <ButtonLink
-            url='https://docs.google.com/document/d/14H0FDivvmYsD8k9MIAPx4qi-9l4JXS4HrrlmE0gYGE4/edit?usp=sharing'
+            url='https://drive.google.com/file/d/1yaQbpyNRfVVWk9VM7KlAZ8HvpMZU9Srd/view?usp=drive_link'
             text='View Resume →'
             padding={`p-3`}
           />
